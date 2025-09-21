@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import { useRouter } from "next/router"
 
 export function HeroSection() {
+  const router = useRouter()
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -162,7 +164,7 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-primary/80 mb-8 max-w-2xl mx-auto">AI-Powered Rockfall Prediction</p>
         </motion.div>
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -170,10 +172,12 @@ export function HeroSection() {
             transform: `translate(${mousePosition.x * 3}px, ${mousePosition.y * 3}px)`,
           }}
         >
-          <button className="px-8 py-4 bg-primary/20 border border-primary text-primary rounded-lg hover:bg-primary/30 transition-all duration-300 text-lg font-medium backdrop-blur-sm">
+          <button
+          onClick={() => router.push("/analysis")}
+          className="px-8 py-4 bg-primary/20 border border-primary text-primary rounded-lg hover:bg-primary/30 transition-all duration-300 text-lg font-medium backdrop-blur-sm">
             Launch App
           </button>
-        </motion.div> */}
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
