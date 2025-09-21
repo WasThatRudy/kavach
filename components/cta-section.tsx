@@ -51,7 +51,7 @@ export function CTASection() {
             </p>
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -64,7 +64,7 @@ export function CTASection() {
               <ArrowRight className="w-6 h-6 mr-3" />
               Request Access
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-primary/20"

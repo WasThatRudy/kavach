@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
 export function HeroSection() {
-  const router = useRouter()
+  const router = useRouter();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
