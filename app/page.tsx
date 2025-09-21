@@ -61,10 +61,6 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 pt-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">99.2%</div>
-                  <div className="text-sm text-gray-400">Accuracy</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-white">50+</div>
                   <div className="text-sm text-gray-400">Zone Analysis</div>
                 </div>
